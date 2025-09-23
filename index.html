@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+
+    </head>
+    <div id="main">
+
+        filho da p
+    </div>
+    <script>
+        let palavrao=[
+            'filho da p',
+            
+        ];
+        palavrao.forEach(palavras=>{
+        let procurar=document.getElementById('main').textContent.trim();
+        if(procurar.startsWith(palavras)){
+            alert('você digitou uma palavra de baixo calão');
+        }
+        });
+    </script>
+</html>
