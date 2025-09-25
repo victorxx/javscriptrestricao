@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Cookie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .botao {
+            width: 300px;
+            height: 150px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 150px;
+            cursor: pointer;
+            border-radius: 12px;
+            color: #fff;
+            margin: 40px auto;
+        }
+
+        #criar {
+            background-color: #e74c3c; /* vermelho */
+        }
+
+        #remover {
+            background-color: #3498db; /* azul */
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <div id="criar" class="botao" onclick="criarCookie()">CRIAR COOKIE</div>
+    <div id="remover" class="botao" onclick="removerCookie()">REMOVER COOKIE</div>
+</div>
+
+<script>
+    function criarCookie() {
+        const data = new Date();
+        data.setTime(data.getTime() + (24 * 60 * 60 * 1000)); // 1 dia
+        const expires = "expires=" + data.toUTCString();
+        document.cookie = "meu=vi; " + expires + "; path=/";
+
+        alert("✅ Cookie 'meu' criado com sucesso!");
+    }
+
+    function removerCookie() {
+        document.cookie = "meu=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        alert("🗑️ Cookie 'meu' removido com sucesso!");
+    }
+</script>
+
+</body>
+</html>
