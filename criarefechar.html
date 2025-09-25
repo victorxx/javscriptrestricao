@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciar Cookie</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+        body{
+            font-family: Arial, Helvetica, sans-serif;
         }
-
-        .botao {
-            width: 300px;
-            height: 150px;
-            font-size: 30px;
+        .botao{
+            width:350px;
+            height:150px;
+            font-size:30px;
             text-align: center;
             line-height: 150px;
-            cursor: pointer;
+            cursor:pointer;
             border-radius: 12px;
-            color: #fff;
-            margin: 40px auto;
+            color:#fff;
+            margin:30px auto;
         }
-
-        #criar {
-            background-color: #e74c3c; /* vermelho */
+        #criar{
+            background-color:green;
         }
-
-        #remover {
-            background-color: #3498db; /* azul */
+        #remove{
+            background-color:red;
         }
-
-        #container {
+        #container{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -38,29 +30,54 @@
             height: 100vh;
         }
     </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Cookie</title>
+   
 </head>
 <body>
+    <div id="container">
+        <div id="remove" class="botao" onclick="remove()">REMOVER O COOKIE</div>
+        <div id="criar" class="botao" onclick="criarcookie()">CRIAR COOKIE</div>
+       
+        <script>
+            function criarcookie(){
+                let data=new Date();
+                data.setTime(data.getTime()+(24*60*60*1000));
+                let expires='expires='+data.toUTCString();
+                document.cookie='meu=vi;'+expires+';path=/';
+           
+                let cookies=document.cookie.split(';');
+                for(let i=0;i<cookies.length;i++){
+                   let cookie=cookies[i].trim();
+                   if(cookie.startsWith('meu=vi')){
+                    alert(cookie);
+                   }
+                    
+                    
+                }
 
-<div id="container">
-    <div id="criar" class="botao" onclick="criarCookie()">CRIAR COOKIE</div>
-    <div id="remover" class="botao" onclick="removerCookie()">REMOVER COOKIE</div>
-</div>
 
-<script>
-    function criarCookie() {
-        const data = new Date();
-        data.setTime(data.getTime() + (24 * 60 * 60 * 1000)); // 1 dia
-        const expires = "expires=" + data.toUTCString();
-        document.cookie = "meu=vi; " + expires + "; path=/";
+            }
+            function remove(){
+                document.cookie="meu=vi;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                let cookies=document.cookie.split(';');
+                for(let i=0;i<cookies.length;i++){
+                    let cookie=cookies[i].trim();
+                    if(cookie.startsWith('meu=vi')){
+                        alert('o cookie ainda permanece não foi deletado ainda não');
 
-        alert("✅ Cookie 'meu' criado com sucesso!");
-    }
+                    }else{
+                        alert('cookie removido com sucesso');
+                        break;
+                    }
 
-    function removerCookie() {
-        document.cookie = "meu=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-        alert("🗑️ Cookie 'meu' removido com sucesso!");
-    }
-</script>
+                }
+
+                
+            }
+        </script>
+    </div>
 
 </body>
 </html>
