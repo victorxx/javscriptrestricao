@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+
+    </head>
+    <body>
+<div id="main" style="position: absolute; left:0 ;bottom:55%;">
+    victor saib
+</div>
+        <script>
+          let posicaox=0;
+          let posicaoy=0;
+          document.addEventListener('keydown',function(event){
+if(event.key==='a'||event.key==='A'){
+    posicaox+=1;
+    document.getElementById('main').style.left=posicaox+'px';
+}else if(event.key==='d'||event.key==='D'){
+    posicaox-=1;
+    document.getElementById('main').style.left=posicaox+'px';
+}else if(event.key==='s'||event.key==='S'){
+    posicaoy-=1;
+    document.getElementById('main').style.bottom=posicaoy+'px';
+}else if(event.key==='w'||event.key==='W'){
+    posicaoy+=1;
+    document.getElementById('main').style.bottom=posicaoy+'px';
+}
+          });
+     
+        </script>
+    </body>
+</html>
