@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Detector de Palavrões</title>
+</head>
+<body>
+    <div id="main">
+        filho da p
+    </div>
+
+    <script>
+        let palavroes = [
+            'filho da p',
+            'merda',
+            'desgraçado',
+            'puta',
+            'caralho',
+            // Adicione mais palavrões aqui
+        ];
+
+        let texto = document.getElementById('main').textContent.toLowerCase().trim();
+
+        let encontrou = palavroes.some(palavra => texto.includes(palavra));
+
+        if (encontrou) {
+            alert('Você digitou uma palavra de baixo calão!');
+        }
+    </script>
+</body>
+</html>
