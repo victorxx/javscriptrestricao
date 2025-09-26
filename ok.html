@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            #m{
+                font-size: 120px;
+
+
+            }
+        </style>
+    </head>
+    <body>
+        <div id="m">ok</div>
+        <script>
+            let idades=[1,2,3];
+            let funcionar=idades.some(check);
+            document.getElementById('m').innerHTML=funcionar;
+            function check(idades){
+                
+                return idades>1;
+                
+            }
+        </script>
+    </body>
+</html>
