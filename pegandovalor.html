@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+    <head>
+    <style>
+        #resultado{
+            width: 300px;
+            height: 250px;
+            position: absolute;
+            background-color: orange;
+            color:white;
+            text-align: center;
+            line-height: 220px;
+            font-size: 90px;
+            border-radius: 120px;
+            
+        }
+        #m{
+            max-width: 550px;
+            flex-direction: row;
+            display: flex;
+            line-height: 120px;
+            bottom:20%px;
+            padding:20px;
+            left: 55%;
+            gap:30px;
+            
+            position: absolute;
+            background-color: blue;
+
+            flex-wrap: wrap;
+        }
+        #m div{
+            display: flex;
+            width:120px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 120px;
+            color:White;
+            font-size: 55px;;
+            border-radius: 30px;
+            height: 120px;
+            justify-content: center;
+            background-color: red;
+        }
+    </style>
+    </head>
+    <body>
+         <div id="m">
+        <div data-value="1">ok</div>
+        <div data-value="2">ok</div>
+        <div data-value="3">ok</div>
+    </div>
+    <div id="resultado"></div>
+
+    </body>
+    <script>
+        let selecionar=document.querySelectorAll('#m div');
+        selecionar.forEach(pessoa=>{
+         pessoa.addEventListener('click',()=>{
+          let valor=pessoa.getAttribute('data-value');
+          document.getElementById('resultado').innerHTML=valor;
+         });
+        });
+    </script>
+</html>
+    
