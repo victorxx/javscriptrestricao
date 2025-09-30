@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    </head>
+    <body>
+    <div id="main" style="position: absolute;">
+        MOVIMENTO DA DIV
+    </div>
+    <script>
+        document.write('<br>'.repeat(6));
+    </script>
+<div id="ok">
+    resposta
+</div>
+<script>
+let posicao=0;
+document.addEventListener('keydown',function(event){
+if(event.key==='a'||event.key==='A'){
+    
+    posicao += 1;
+    document.getElementById('main').style.left = posicao + 'px';
+    
+    let elemento=document.getElementById('main');
+    let pos=elemento.getBoundingClientRect();
+    let resposta=document.getElementById('ok');
+    resposta.innerHTML=`
+    ESQUERDA:${pos.left}px<br>
+    DIREITA:${pos.right}px<br>
+    `;
+}
+});
+</script>
+
+
+    </body>
+</html>
