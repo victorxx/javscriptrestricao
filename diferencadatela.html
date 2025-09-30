@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    </head>
+    <body>
+        <div id="resultado">
+            SABER QUAL DIFERENCA DE LARGURA DE AMBOS OS LADOS
+        </div>
+        <br>
+        <br>
+        <div id="resposta"></div>
+        <script>
+            let elemento=document.getElementById('resultado');
+            let pos=elemento.getBoundingClientRect();
+            let resposta=document.getElementById('resposta');
+            resposta.innerHTML=`
+            ESQUERDA:${pos.left}px<br>
+            DIREITA:${pos.right}px<br>
+            `;
+
+        </script>
+    </body>
+</html>
