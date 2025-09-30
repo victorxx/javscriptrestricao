@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        #main {
+            
+            max-width: 550px;
+            gap: 30px;
+            height: 500px;
+            background-color: orangered;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            color: white;
+            font-size: 55px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    ok
+</div>
+<script>
+    let paginas=[
+{url:'https://github.com',name:'GitHub'},
+{url:'https://stackoverflow.com',name:'stack'},
+{url:'https://stackoverflow.com',name:'stack'}
+    ];
+let main=document.getElementById('main');
+paginas.forEach(site=>{
+let link=document.createElement('a');
+link.href=site.url;
+link.textContent=site.name;
+link.target='_blank';
+let criar=document.createElement('br');
+
+
+
+main.appendChild(link);
+main.appendChild(criar);
+
+});
+</script>
+</body>
+</html>
