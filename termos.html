@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let textos=['seguros','ok'];
+            let palavra=prompt('digite algo');
+            let encontrado=textos.some(p=>p.includes(palavra));
+            if(encontrado){
+                alert('ok foi encontrado');
+            }else{
+                alert('não foi encontrado');
+            }
+        </script>
+    </body>
+</html>
