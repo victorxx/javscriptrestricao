@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>verificador de palavra</title>
+
+    </head>
+    <body>
+        <script>
+        let textos=['seguros','rola'];
+        let palavra=prompt('digite a palavra');
+        let encontrado=textos.some(pessoa=>pessoa.includes(palavra));
+        if(encontrado){
+            alert('encontrado');
+        } else {
+            alert('não foi');
+        }
+        </script>
+    </body>
+</html>
