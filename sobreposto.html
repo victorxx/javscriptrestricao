@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <style>
+        #main{
+            width:350px;
+            background-color:orange;
+            height:120px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-align: center;
+            font-size: 50px;
+            position: absolute;
+        }
+        #main2{
+           width:350px;
+            background-color:rebeccapurple;
+            height:120px;
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-align: center;
+            font-size: 50px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">SAIB</div>
+    <div id="main2">VICTOR</div>
+<script>
+    let posicao=0;
+    document.addEventListener('keydown',function(event){
+        if(event.key==='a'||event.key==='A'){
+            posicao+=1;
+            document.getElementById('main').style.left=posicao+'px';
+        }  
+    });
+</script>
+</body>
+</html>
