@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
     <style>
-        #sangue {
-            width: 500px;
-            background-color: red;
-            height: 250px;
-            display: flex;
-            flex-wrap: wrap;
-        }
+        #vermelho{
+            width:350px;
+            height:250px;
+            background-color:red;
+            text-align: center;
+            line-height: 120px;
+            font-size: 50px;
 
-        #dano {
-            width: 500px; /* Começa com 200px, por exemplo */
-            background-color: green;
-            height: 250px;
-            display: flex;
-            flex-wrap: wrap;
-            cursor: pointer;
+        }
+        #verde{
+            width:350px;
+            height:250px;
+            background-color:green;
+            text-align: center;
+            line-height: 150px;
+            cursor:pointer;
+
         }
     </style>
-</head>
-<body>
-    <div id="sangue">
-        <div id="dano" onclick="dano()"></div>
-    </div>
+    <body>
+    <div id="vermelho">
+    <div id="verde" onclick="ok()">
+        <script>
+            let vai=document.getElementById('verde');
+            let posicao=parseInt(getComputedStyle(vai).width);
+            function ok(){
+                posicao-=20;
+                vai.style.width=posicao+'px';
 
-    <script>
-        // Pega a largura inicial do elemento ao carregar a página
-        let barradedano = document.getElementById('dano');
-        let pontos = parseInt(getComputedStyle(barradedano).width); // pega largura inicial
+            }
+        </script>
 
-        function dano() {
-            pontos -= 10; // aumenta 10px a cada clique
-         // não ultrapassa limite do container
-            barradedano.style.width = pontos + 'px';
-        }
-    </script>
+  </div>
+  </div>
 </body>
+
 </html>
