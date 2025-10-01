@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+
+    </head>
+    <body>
+        <input type="text" id="entrada">
+        <div id="mensagem"></div>
+        <script>
+            let palavrao=['a','b']
+            let entrada=document.getElementById('entrada');
+            entrada.addEventListener('input',()=>{
+            let ok=entrada.value.trim().toLowerCase();
+            let filtro=palavrao.some(p=>ok.includes(p));
+            if(filtro){
+                document.getElementById('mensagem').innerHTML='ok você escreveu bobagem';
+            }
+            });
+        </script>
+    </body>
+</html>
