@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+    </head>
+    <body>
+        <div id="main">
+            quero meter
+        </div>
+        <script>
+            let palavrao=[
+                'quero meter',
+                'Quero meter',
+                'QUERO METER'
+            ];
+            let buscar=document.getElementById('main').textContent.trim();
+            palavrao.forEach(pessoa=>{
+                if(buscar==pessoa){
+                    alert('temos palavrão');
+                }
+            })
+        </script>
+    </body>
+</html>
