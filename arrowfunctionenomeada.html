@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    </head>
+    </head>
+    <body>
+        <div id="resposta2"></div>
+        <div id="resposta">
+            <script>
+                numeros=[
+                    1,2,3,4,5
+                ];
+              let verificar=numeros.some(p=>p>14);
+              document.getElementById('resposta').innerHTML=verificar+'<br>'+'ARROW FUNCTION';
+            </script>
+            <script>
+                let verificar2=numeros.some(funcao);
+                document.getElementById('resposta2').innerHTML=verificar2+'<br>'+'funcao nomeada';
+                function funcao(numeros){
+                    return numeros>1;
+                }
+
+            </script>
+        </div>
+    </body>
+</html>
