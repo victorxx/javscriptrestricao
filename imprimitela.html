@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+<style>
+    #main{
+        width:550px;
+        height: 250px;
+        background-color: orangered;
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+        line-height: 120px;
+        flex-direction:row-reverse;
+        gap:30px;
+        margin:auto;
+        font-size: 90px;
+        align-items: center;
+    }
+    #main div{
+        margin: auto;
+    }
+
+</style>
+
+    </head>
+    <body>
+
+        <div id="main">
+            <div>ok</div>
+        </div>
+        <input id="entrada" type="text">
+        <script>
+            
+            let resultado=document.querySelector('#main div');
+            let puxar=document.getElementById('entrada');
+            puxar.addEventListener('input',()=>{
+              let dados=document.getElementById('entrada');
+              
+              resultado.innerHTML=dados.value.trim();
+            });
+        </script>
+        
+    </body>
+</html>
