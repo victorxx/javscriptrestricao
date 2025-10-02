@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        
+    </head>
+    <body>
+        <div id="resultado2"></div>
+        
+        <div id="resultado">
+            sabe qual
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="resposta"></div>
+        <div id="resposta2"></div>
+        <div id="resposta3"></div>
+        <script>
+           let elemento=document.getElementById('resultado');
+           let pos=elemento.getBoundingClientRect();
+
+           let resposta=document.getElementById('resposta');
+           resposta.innerHTML=`Esquerda ${pos.left}px<br>
+           Direita: ${pos.right}px<br>
+           `;
+           let elemento2=document.getElementById('resultado2');
+           let pos2=elemento2.getBoundingClientRect();
+
+           let resposta2=document.getElementById('resposta2');
+           resposta2.innerHTML=`
+            DIREITA:${pos2.right}px<br>
+           
+           `;
+           if(pos2.right==pos.right){
+              document.getElementById('resposta3').innerHTML='os dois estão encostados';
+           }
+        </script>
+    </body>
+</html>
