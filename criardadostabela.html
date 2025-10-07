@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            table{
+                width:550px;
+                height: 250px;
+                background-color: cornflowerblue;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <table border="1" id="janela">
+            <thead>
+                <tr>
+                    <th>ok</th><th>ok</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ok</td>
+                    <td>ok</td>
+                </tr>
+            </tbody>
+            <script>
+                let dados=[
+                    {
+                        primero:'primeiro',segundo:'segundo'
+                    },
+                     {
+                        primero:'terceiro',segundo:'quarto'
+                    },
+                ];
+                dados.forEach(pessoa=>{
+                  let criar=document.createElement('tr');
+                  criar.innerHTML=`
+                  <td>${pessoa.primero}</td><td>${pessoa.segundo}</td>
+                  `;
+                  document.querySelector('#janela tbody').appendChild(criar);
+
+                });
+            </script>
+
+
+        </table>
+    </body>
+</html>
