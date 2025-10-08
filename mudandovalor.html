@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+        .container div{
+            width:100px;
+            height: 100px;
+            background-color: orange;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <div  data-value="1">1</div>
+            <div data-value="2">2</div>
+            <script>
+                let data=document.querySelectorAll('.container div');
+                data.forEach(pessoa=>{
+                  pessoa.addEventListener('click',()=>{
+                    let puxar=pessoa.getAttribute('data-value');
+                    if(puxar=='2'){
+                       alert('ok você clico no certo');
+                       pessoa.innerHTML='x';
+                    }
+
+                  });
+                });
+            </script>
+        </div>
+
+
+    </body>
+</html>
