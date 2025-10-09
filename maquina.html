@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            .container{
+                display: grid;
+                grid-template-columns: auto auto;
+                gap:50px;
+            }
+            .container div{
+                background-color: green;
+                font-size: 100px;
+                text-align: center;
+                padding:20px;
+            }
+        </style>
+        <body>
+            <div class="container">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <script>
+                    let dados=document.querySelectorAll('.container div');
+                    let ligado=true;
+                   dados.forEach(maquina=>{
+                    maquina.addEventListener('click',()=>{
+                        maquina.innerHTML='ok';
+                        let escolher=Math.floor(Math.random()*dados.length);
+                        let escolhid=dados[escolher];
+                        if(escolhid.textContent=='ok'){
+                        }else{
+                            escolhid.innerHTML='máquina escolheu';
+                        }
+                    });
+                   });
+                </script>
+            </div>
+        </body>
+
+    </head>
+</html>
