@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <style>
+           .container{
+            display: grid;
+            gap:50px;
+            padding:30px;
+            grid-template-columns: auto auto auto;
+            background-color: orange;
+           }
+           .container div{
+            text-align: center;
+            color:white;
+            font-size: 30px;
+            background-color: blueviolet;
+            line-height: 120px;
+            height: 150px;
+            cursor:pointer;
+           }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div data-value="1">1</div>
+            <div data-value="2">2</div>
+            <div data-value="3">3</div>
+        </div>
+        <button id="robo">Máquina escolhendo</button>
+    <script>
+        let dados=document.querySelectorAll('.container div');
+        document.getElementById('robo').addEventListener('click',()=>{
+           let resposta=Math.floor(Math.random()* dados.length);
+           let escolhido=dados[resposta];
+           if(escolhido.innerHTML!=='marcado'){
+           
+            escolhido.innerHTML='Máquina marcou';
+           }
+           
+        });
+        dados.forEach(buscar=>{
+        let click=buscar.addEventListener('click',()=>{
+           let marcar=buscar.getAttribute('data-value');
+           
+           buscar.innerHTML='marcado';
+         
+        
+        });
+        });
+
+    </script>
+    </body>
+</html>
