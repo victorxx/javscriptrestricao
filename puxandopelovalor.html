@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+         .foi{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap:30px;
+
+         }
+         .foi div{
+            background-color: red;
+            padding:20px;
+            text-align: center;
+            color:white;
+         }
+        </style>
+    </head>
+    <body>
+        <div class="foi">
+            <div>1
+
+            </div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <script>
+            let puxar=document.querySelectorAll('.foi div');
+            puxar.forEach(puxa=>{
+             puxa.addEventListener('click',()=>{
+                 let puxei=puxa.textContent;
+                 alert(puxei);
+             });
+            });
+        </script>
+    </body>
+</html>
