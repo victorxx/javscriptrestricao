@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #img{
+                position: absolute;
+                left:10%;
+                bottom:30%;
+            }
+            #seta{
+                position: absolute;
+                left: 20%;
+                bottom: 40%;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="img"></div>
+        <div id="seta" onclick="mudar()">
+                <img src="https://png.pngtree.com/png-vector/20250329/ourmid/pngtree-symbol-icon-arrow-red-arrows-vector-set-bold-curved-flat-design-png-image_15900797.png">
+        </div>
+        <script>
+            let img=[
+            'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/d9/fa/1b/lost-valley.jpg?w=900&h=500&s=1',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAuApBXYFY2vQvBvL-CEP3Hpr_rxMHPRM-3w&s'
+            ];
+            let indice=0;
+            let criar_img=document.createElement('img');
+            criar_img.width='300';
+            criar_img.height='200';
+            criar_img.src=img[indice];
+            document.getElementById('img').appendChild(criar_img);
+            function mudar(){
+                indice=(indice+1) % img.length;
+                criar_img.src=img[indice];
+            }
+        </script>
+        
+    </body>
+</html>
