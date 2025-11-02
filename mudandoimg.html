@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            #img{
+                width:350px;
+                height: 250px;
+                position: absolute;
+                left: 30%;
+                padding:20px;
+                background-color: orange;
+                border:10px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="img">
+            
+        </div>
+        <script>
+            let imagem=[
+                'https://t.ctcdn.com.br/JlHwiRHyv0mTD7GfRkIlgO6eQX8=/640x360/smart/i257652.jpeg',
+                'https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-abstract-cloudy-background-beautiful-natural-streaks-of-sky-and-clouds-red-image_15684333.jpg'
+            ];
+            let indice=0;
+            let escolhar=imagem[indice];
+            let criar_img=document.createElement('img');
+            criar_img.width=300;
+            criar_img.height=250;
+            criar_img.src=escolhar;
+            document.getElementById('img').appendChild(criar_img);
+            function mud(){
+                indice=(indice+1) % imagem.length;
+                criar_img.src=imagem[indice];
+            }
+            setInterval(mud,900);
+           
+          
+        
+           
+
+
+
+            
+            
+
+        </script>
+
+    </body>
+</html>
