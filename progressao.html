@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <style>
+        #sangue{
+            width:0;
+            height: 100px;
+            background-color: red;
+            padding:20px;
+            color:white;
+            display: grid;
+        }
+    </style>
+    <body>
+        <div id="sangue">
+
+        </div>
+        <script>
+            let sangue=document.getElementById('sangue');
+            let puxar=parseInt(getComputedStyle(sangue).width);
+            function encher(){
+                puxar+=1;
+                sangue.style.width=puxar+'px';
+
+            }
+            setInterval(encher,100);
+            
+        </script>
+        
+        
+    </body>
+</html>
