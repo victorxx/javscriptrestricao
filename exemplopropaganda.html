@@ -1,0 +1,15 @@
+<div id="floatingAd" 
+     style="position:fixed;bottom:20px;right:20px;background:orange;color:black;padding:15px;border-radius:12px;box-shadow:0 0 15px rgba(0,0,0,0.5);font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:space-between;z-index:1000;cursor:pointer;"
+     onclick="window.open('https://www.exemplo.com','_blank');">
+  <img src="https://ufop.br/sites/default/files//destaque_site_2024_geral_-_oportunidade_01.png" style="max-width:60px;max-height:60px;margin-right:10px;">
+  <strong>Confira essas novidades, uau!</strong>
+  <button style="margin-left:10px;background:red;color:white;border:none;border-radius:50%;width:25px;height:25px;font-weight:bold;cursor:pointer;"
+          onclick="document.cookie='adClosed=true;path=/;max-age='+60*60*24*7;document.getElementById('floatingAd').style.display='none';event.stopPropagation();">×</button>
+</div>
+
+<script>
+  // Esconder se cookie já existe
+  if(document.cookie.indexOf('adClosed=true') !== -1){
+    document.getElementById('floatingAd').style.display='none';
+  }
+</script>
