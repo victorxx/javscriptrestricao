@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+       <style>
+        #contato{
+            background-color: red;
+            width:350px;
+            text-align: center;
+            font-size: 30px;
+            border-radius: 12px;
+            background-color: red;
+            transition: fade 0.3s ease;
+        }
+        #contato.fade{
+            opacity: 0;
+        }
+        @media(max-width:550px){
+
+            #contato{
+               width:100px;
+            }
+        }
+       </style>
+    </head>
+    <body>
+        <div id="ads"></div>
+        <div id="contato">
+            ok vamos
+        </div>
+        <script>
+            function mudar(){
+                let contato=document.getElementById('contato');
+                contato.classList.add('fade');
+                setTimeout(()=>{
+                contato.classList.remove('fade');
+                },300);
+            }
+            mudar();
+            setInterval(mudar,300);
+        </script>
+    </body>
+</html>
