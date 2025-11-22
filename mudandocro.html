@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    </head>
+    <body>
+        <script>
+            let inicial='white';
+            let mudando='black';
+            let timeout;
+            document.addEventListener('mousemove',()=>{
+            document.body.style.backgroundColor=mudando;
+            clearTimeout(timeout);
+            timeout=setTimeout(()=>{
+            document.body.style.backgroundColor=inicial;
+            },30);
+            });
+        </script>
+    </body>
+</html>
