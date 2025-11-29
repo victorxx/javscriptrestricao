@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            #barra{
+                width:0;
+                height: 250px;
+                border-radius: 12px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="barra"></div>
+        <script>
+            let contador=0;
+            document.addEventListener('mousemove',()=>{
+                contador+=1;
+            document.getElementById('barra').style.width=contador+'px';
+            });
+        </script>
+    </body>
+</html>
