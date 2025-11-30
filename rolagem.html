@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+<style>
+    #ir_propaganda{
+        width:350px;
+        height: 250px;
+        line-height: 120px;
+        padding:20px;
+        text-align: center;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 55px;
+        background-color: orange;
+    }
+</style>
+    </head>
+    <body>
+        <div id="ir_propaganda" onclick="ok()">IR PRODUTO</div>
+        <script>
+        document.write('<br>'.repeat(100));
+        </script>
+      <div id="cadeira">
+        cadeira de praia
+      </div>
+      <script>
+        function ok(){
+            let alvo=document.getElementById('cadeira');
+            alvo.scrollIntoView({behavior:'smooth'});
+        }
+      </script>
+    </body>
+</html>
