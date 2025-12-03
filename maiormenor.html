@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificação de Idade</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 20px;
+        }
+        button{
+            width: 250px;
+            height: 250px;
+            background-color: red;
+            color: white;
+            font-size: 30px;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="maior()">SOU DE MAIOR</button>
+    <button onclick="menor()">SOU DE MENOR</button>
+
+    <script>
+        function maior() {
+            document.cookie = "idade=maior; path=/; max-age=" + 24*60*60;
+            alert("Ok, você é de maior");
+        }
+
+        function menor() {
+            document.cookie = "idade=menor; path=/; max-age=" + 24*60*60;
+            alert("Ok, você é de menor");
+        }
+    </script>
+</body>
+</html>
