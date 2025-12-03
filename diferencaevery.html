@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            #retorno{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                gap:30px;
+                text-align: center;
+                background-color: red;
+                color:white;
+            }
+            #some.verde{
+                background-color: green;
+                padding:20px;
+                font-size: 100px;
+            }
+            #every.vermelho{
+                background-color: red;
+                padding:20px;
+                font-size: 100px;
+            }
+            @media(max-width:550px){
+                #some.verde{
+                    font-size: 30px;
+                }
+                #every.vermelho{
+                    font-size: 30px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="retorno">
+            <div id="some" class="verde">
+
+            </div>
+            <div id="every" class="vermelho">
+            </div>
+        </div>
+        <script>
+            let numeros=[1,2,3,4,5,6];
+            let resultado=numeros.some(n=>n%2===0);
+            document.getElementById('some').innerHTML=`O RESULTADO DO RETORNO COM SOME ${resultado}`;
+
+        </script>
+        <script>
+            let numeros2=[2,4,5,6,6];
+            let resultado2=numeros.every(n=>n%2===0);
+            document.getElementById('every').innerHTML=`O RESULTADO COM EVERY É EXATAMENTE ESSE AQUI->${resultado2}`;
+        </script>
+    </body>
+</html>
