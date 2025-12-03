@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <style>
+        #btn{
+            width:auto;
+            bottom:20px;
+            background-color: red;
+            text-align: center;
+            border-radius: 12px;
+            height: 25px;
+            cursor: pointer;
+        }
+    </style>
+    <body>
+        <div id="btn" onclick="ir()">
+            IR
+        </div>
+        <script>
+            document.write('<br>'.repeat(100));
+        </script>
+        <div id="conteudo">
+            ok
+        </div>
+        <script>
+            function ir(){
+                let alvo=document.getElementById('conteudo');
+                alvo.scrollIntoView({behavior:'smooth'});// forma leve
+            }
+        </script>
+    </body>
+  <!DOCTYPE html>
+<html lang="pt-br">
+    <style>
+        #btn{
+            width:auto;
+            bottom:20px;
+            background-color: red;
+            text-align: center;
+            border-radius: 12px;
+            height: 25px;
+            cursor: pointer;
+        }
+    </style>
+    <body>
+        <div id="btn" onclick="ir()">
+            IR
+        </div>
+        <script>
+            document.write('<br>'.repeat(100));
+        </script>
+        <div id="conteudo">
+            ok
+        </div>
+        <script>
+            function ir(){
+                let alvo=document.getElementById('conteudo');
+                alvo.scrollIntoView({behavior:'auto'});//sem animacao
+            }
+        </script>
+    </body>
+</html>
+</html>
