@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            body{
+                background-color: black;
+                justify-content: center;
+                gap:30px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            button{
+                width:250px;
+                color:white;
+                padding:20px;
+                height: 250px;
+                font-size: 30px;
+                border-radius: 12px;
+                cursor: pointer;
+            }
+            .maior{
+                background-color: green;
+            }
+            .menor{
+                background-color: red;
+            }
+            @media(max-width:550px){
+                button{
+                    width:150px;
+                    height: 250px;
+                    font-size: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="maior()" class="maior">SOU DE MAIOR</button>
+        <button onclick="menor()" class="menor">SOU DE MENOR</button>
+        <script>
+            function maior(){
+                document.cookie='idade=maior;path=/;max-age='+24*60*60;
+                alert('você é de maior');
+            }
+            function menor(){
+                document.cookie='idade=menor;path=/;max-age='+24*60*60;
+                alert('você é de menor');
+            }
+            function iniciar(){
+                let cookies=document.cookie.split(';');
+                for(let i=0;i<cookies.length;i++){
+                    let cookie=cookies[i].trim();
+                    if(cookie.startsWith('idade=maior;')){
+                        alert('ok você é de maior');
+                    }
+                    if(cookie.startsWith('idade=menor;')){
+                        alert('ok você é de menor');
+                    }
+                }
+            }
+            iniciar();
+        </script>
+    </body>
+</html>
