@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+
+<!-- META TAGS DE SEO -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vídeo e oportunidades online: Airbnb, VPS, oportunidades e anúncios. Conteúdo otimizado para melhor desempenho e visualização.">
+<meta name="keywords" content="airbnb, oportunidades, vps, video, anuncio, ofertas, renda extra">
+<meta name="author" content="Seu Nome">
+
+<!-- OPEN GRAPH (FACEBOOK / WHATSAPP) -->
+<meta property="og:title" content="Confira este vídeo e oportunidades especiais!">
+<meta property="og:description" content="Veja o vídeo completo e acesse ofertas exclusivas como Airbnb, VPS e muito mais.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://i.imgur.com/9Y8Zy3F.jpeg">
+<meta property="og:url" content="https://seusite.com">
+
+<!-- TWITTER CARDS -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vídeo + Oportunidades Exclusivas!">
+<meta name="twitter:description" content="Assista ao vídeo e aproveite nossas oportunidades.">
+<meta name="twitter:image" content="https://i.imgur.com/9Y8Zy3F.jpeg">
+
+<style>
+    body {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* video principal CENTRALIZADO */
+    #grid {
+        width: 350px;
+        background-color: orange;
+        padding: 15px;
+        border-radius: 12px;
+        margin-top: 30px;
+    }
+
+    #grid iframe {
+        width: 100%;
+        height: 200px;
+        border: none;
+        border-radius: 12px;
+    }
+
+    /* blocos da propaganda */
+    #propaganda {
+        width: 90%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    #propaganda button {
+        background-color: red;
+        color: white;
+        padding: 20px;
+        border-radius: 12px;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    #propaganda iframe {
+        width: 100%;
+        height: 200px;
+        border: none;
+        border-radius: 12px;
+    }
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 550px) {
+        #grid {
+            width: 90%;
+        }
+
+        #grid iframe {
+            height: 180px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+    <!-- Propaganda -->
+    <div id="propaganda">
+              <iframe id="iframe-fixo" loading="lazy"
+            src="https://produto-63y.pages.dev/oportunidade"
+            scrolling="no"
+            title="Anúncio Fixo Responsivo">
+        </iframe>
+        <button onclick="ok('https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g')">QUERO COMECAR NO AIRBNB</button>
+        <button onclick="ok2('https://produto-63y.pages.dev/vps')">Ideal para sites, lojas virtuais, bots e aplicações em nuvem.</button>
+        <button onclick="ok3('https://sites.google.com/view/recomendao-do-dia/oportunidade?authuser=1')">CONFIRA ESSA OPORTUNIDADE</button>
+        <button onclick="ok4('https://vendaschamada.blogspot.com/')">OPAAAA CONFIRA ESSA OPORTUNIDADE</button>
+        <script>
+            function ok(url){
+                window.location.href=url;
+            }
+        </script>
+    </div>
+
+    <!-- Video principal -->
+    <div id="grid">
+        <iframe 
+            src="https://www.youtube.com/embed/C6lS9w-XkFo?si=PpOT0m30R1mcAKhy"
+            scrolling="no"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+</body>
+</html>
