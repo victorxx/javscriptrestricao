@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            body{
+                background-color: black;
+                align-items: center;
+                flex-direction: column;
+                flex-wrap: wrap;
+                display: flex;
+                gap:30px;
+
+            }
+            button{
+                width:250px;
+                height: 250px;
+                color:white;
+                border:none;
+                cursor: pointer;
+                
+                border-radius: 12px;
+                background-color: red;
+            }
+            .maior{
+                background-color: green;
+                
+            }
+            .menor{
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="maior()" class="maior">SOU DE MAIOR</button>
+        <button onclick="menor()" class="menor">SOU DE MENOR</button>
+        <script>
+function maior(){
+    document.cookie='idade=maior;path=/;max-age='+24*60*60;
+    alert('ok você é de maior');
+}
+function verificar(){
+    let cookies=document.cookie.split(';');
+    for(let i=0;i<cookies.length;i++){
+        let cookie=cookies[i].trim();
+        if(cookie.startsWith('idade=maior')){
+            alert('cookie criado com sucesso');
+        }
+    }
+
+}
+
+        </script>
+    </body>
+</html>
