@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            body{
+                background-color: black;
+            }
+            #novo{
+                width:550px;
+                position: absolute;
+                left: 33%;
+                bottom:20%;
+                height: 330px;
+                padding:20px;
+
+                background-color: red;
+                border-radius: 22px;
+            }
+            #novo button{
+                border-radius: 12px;
+                width: 200px;
+                height: 120px;
+                text-align: center;
+                font-size: 30px;
+            }
+            #novo input{
+                width:550px;
+                height: 120px;
+                border-radius: 12px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="novo">
+            <h2>VENDO CAMISETA</h2>
+            <p>ESTA CAMISETA É MUITO BOA QUASE NÃO USEI</p>
+            <button onclick="ok()">QUERO SABER+</button>
+            <input id="caixa" type="text" style="display: none;">
+
+        </div>
+        <script>
+            function ok(){
+            document.getElementById('caixa').style.display='block';
+            }
+        </script>
+
+
+    </body>
+</html>
