@@ -1,0 +1,9 @@
+<script>
+    let data=new Date();
+    data.setTime(data.getTime()+24*60*60);
+    document.cookie='idade=menor;expires='+data.toUTCString()+';path=/';
+</script>
+<script>
+    document.cookie='idade=menor;path=/;max-age='+24*60*60;
+    //max-age
+</script>
