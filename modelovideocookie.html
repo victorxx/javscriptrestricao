@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEGADINHA RINDO NA FRENTE DE ESTRANHOS</title>
+
     <style>
         body {
             background-color: black;
@@ -32,10 +33,12 @@
             border-radius: 12px;
         }
 
+        /* Anúncio */
         #ads {
             position: absolute;
             top: 20px;
-            right: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             width: 550px;
             height: 440px;
             border-radius: 12px;
@@ -45,14 +48,25 @@
             align-items: center;
             color: white;
             font-weight: bold;
-            left: 5%;
             cursor: pointer;
             z-index: 10;
+            transition: opacity .4s ease;
+        }
+
+        /* Responsivo para telas pequenas */
+        @media (max-width: 600px) {
+            #ads {
+                width: 90%;
+                height: 300px;
+            }
         }
     </style>
+
 </head>
 <body>
-    <div id="ads" onclick="ok()">OK</div>
+
+    <div id="ads" onclick="ocultarAds()">CLIQUE PARA FECHAR</div>
+
     <div class="grid">
         <iframe 
             src="https://www.youtube.com/embed/ffeWFC2y19Q?si=zHf1A61O7dl2Hp8K" 
@@ -63,27 +77,37 @@
     </div>
 
     <script>
-        function ok() {
-            // Cria cookie por 120 horas
-            document.cookie = 'clicado=ok; path=/; max-age=' + (120*60*60);
-            // Esconde o anúncio
-            document.getElementById('ads').style.display = 'none';
-            alert('Cookie criado e anúncio escondido');
+
+        function ocultarAds() {
+            // Dura 10 dias → 864000 segundos
+            const dias = 10 * 24 * 60 * 60;
+
+            document.cookie = 'clicado=ok; path=/; max-age=' + dias;
+
+            // Efeito bonito de fade
+            const ads = document.getElementById('ads');
+            ads.style.opacity = "0";
+
+            setTimeout(() => {
+                ads.style.display = "none";
+            }, 400);
         }
 
-        function verificar() {
-            let cookies = document.cookie.split(';');
+        function verificarCookie() {
+            const cookies = document.cookie.split(";");
+
             for (let i = 0; i < cookies.length; i++) {
-                let cookie = cookies[i].trim();
-                if (cookie.startsWith('clicado=ok')) {
-                    // Se o cookie existe, esconde o anúncio
-                    document.getElementById('ads').style.display = 'none';
+                const cookie = cookies[i].trim();
+
+                if (cookie.startsWith("clicado=ok")) {
+                    document.getElementById('ads').style.display = "none";
                 }
             }
         }
 
-        // Chama verificar ao carregar a página
-        window.onload = verificar;
+        window.onload = verificarCookie;
+
     </script>
+
 </body>
 </html>
