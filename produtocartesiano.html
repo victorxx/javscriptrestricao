@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+</head>
+<body>
+<div id="ok"></div>
+<script>
+let produto=[
+    ['a','b','g'],
+    ['preto','branco']
+];
+let resultado=[];
+for(let tamanho of produto[0]){
+    for(let cor of produto[1]){
+        resultado.push([tamanho,cor]);
+    }
+}
+document.getElementById('ok').innerHTML=resultado;
+</script>
+</body>
+</html>
