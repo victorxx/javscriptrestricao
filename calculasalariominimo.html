@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+<meta charset="utf-8">
+<title>calcular salários minimos</title>
+ </head>
+ <body>
+<div id="resposta"></div>
+<script>
+let salario=parseFloat(prompt('Digite seu salário'));
+
+let salario_minimo=1518;
+
+let resposta=salario/salario_minimo;
+
+document.getElementById('resposta').innerHTML=`você recebe aproximadamente esse valor ${resposta.toFixed(2)} em salários minimos`
+</script>
+ </body>
+</html>
