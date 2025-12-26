@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Lançamento de Moedas</title>
+</head>
+<body>
+    <div id="moeda"></div>
+
+    <script>
+        let moedas = ['coroa','cara'];
+        let m1 = moedas[Math.floor(Math.random() * moedas.length)];
+        let m2 = moedas[Math.floor(Math.random() * moedas.length)];
+
+        let container = document.getElementById('moeda');
+
+        // Criar elementos <p> para cada resultado
+        let resultado1 = document.createElement('p');
+        resultado1.textContent = m1;
+
+        let resultado2 = document.createElement('p');
+        resultado2.textContent = m2;
+
+        // Adicionar ao container
+        container.appendChild(resultado1);
+        container.appendChild(resultado2);
+    </script>
+</body>
+</html>
