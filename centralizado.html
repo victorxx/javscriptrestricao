@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Facilitador para achar seus produtos - os melhores estão aqui!</title>
+    <meta property="og:image" content="https://raw.githubusercontent.com/victorxx/imagem/refs/heads/main/oportunidade.png">
+    <style>
+        body{
+            background-color: #121212;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 10px;
+        }
+
+        #resultado{
+            background-color: #1f1f1f;
+            border-radius: 12px;
+            padding: 20px 30px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        #resultado h3{
+            margin-bottom: 15px;
+        }
+
+        #resultado a{
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #resultado a:hover{
+            text-decoration: underline;
+        }
+
+        button{
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 18px;
+            background-color: #8a2be2;
+            padding: 15px 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover{
+            background-color: #6f1fbf;
+        }
+    </style>
+</head>
+<body>
+
+<div id="resultado"></div>
+
+<button onclick="trocar()">QUERO VER OUTRO PRODUTO</button>
+
+<script>
+    function trocar(){
+
+        let grupos = [
+             { nome: 'Apple iPhone', link: 'https://www.espiritosanto-es.com.br/telefone1.html' },
+             { nome: 'Monetize seu site ou blog com o Bidvertiser. Ganhe dinheiro com anuncios inteligentes e lances em tempo real', link: 'https://www.espiritosanto-es.com.br/bidvertiser.html' },
+             { nome: 'Transforme sua casa em uma fonte de renda', link: 'https://www.espiritosanto-es.com.br/airbnb.html' },
+             { nome: 'Controles PlayStation e Xbox', link: 'https://www.espiritosanto-es.com.br/acessoriogame1.html' },
+             { nome: 'Cartão Presente - PlayStation e Xbox', link: 'https://www.espiritosanto-es.com.br/cartaopresente.html' },
+             { nome: 'NINTENDO PRODUTOS', link: 'https://www.espiritosanto-es.com.br/produtos/nintendo.html' },
+             { nome: 'SEGURO DE CAMINHÃO', link: 'https://www.espiritosanto-es.com.br/produtos/segurocaminhao.html' },
+             { nome: 'LICENÇA DO WINDOWS', link: 'https://www.espiritosanto-es.com.br/produtos/windows.html' },
+             { nome: 'Produtos da sony', link: 'https://www.espiritosanto-es.com.br/produtos/sony.html' },
+             { nome: 'SEGURO AUTO  SEU CARRO PROTEGIDO', link: 'https://www.espiritosanto-es.com.br/produtos/seguroauto.html' },
+             { nome: 'APRENDA PIXEL ART', link: 'https://www.espiritosanto-es.com.br/produtos/pixelart.html' },
+             { nome: 'Crédito Pessoal: Guia Completo para Tomar Decisões Conscientes', link: 'https://www.espiritosanto-es.com.br/produtos/creditopessoal.html' },
+             { nome: 'A Hospedagem que Une Qualidade, Facilidade e Economia', link: 'https://www.espiritosanto-es.com.br/produtos/hospedagemsite.html' },
+        ];
+
+        let escolher = Math.floor(Math.random() * grupos.length);
+        let escolhido = grupos[escolher];
+
+        // Limpa conteúdo anterior
+        document.getElementById('resultado').innerHTML = "";
+
+        // Criando elemento para exibir
+        let div = document.createElement("div");
+        div.innerHTML = `
+            <h3>${escolhido.nome}</h3>
+            <a href="${escolhido.link}" target="_blank">QUERO SABER +</a>
+        `;
+
+        document.getElementById('resultado').appendChild(div);
+    }
+
+    trocar(); // chama ao iniciar
+</script>
+
+</body>
+</html>
