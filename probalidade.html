@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+
+    </head>
+    <body></body>
+    <script>
+let tentativas=1000;
+let contador=0;
+
+
+for(let i=0;i<tentativas;i++){
+    let moeda=Math.floor(Math.random()*2);
+    if(moeda===0){
+        contador++;
+    }
+}
+alert(`a probalidade aproximada de sair é ${contador/tentativas}`);
+    </script>
+</html>
