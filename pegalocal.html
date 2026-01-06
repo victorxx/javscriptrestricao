@@ -1,0 +1,7 @@
+<script>
+    fetch('https://ipinfo.io/json')
+    .then(res=>res.json())
+    .then(data=>{
+        alert(data.city)
+    })
+</script>
