@@ -1,0 +1,16 @@
+<meta property="og:image" content="">
+<script>
+    let procurar=document.querySelector('meta[property="og:image"]')
+    if(procurar)
+{
+    let imagens=[
+        'https://raw.githubusercontent.com/victorxx/tump/refs/heads/main/geocrediinss.png',
+        'https://raw.githubusercontent.com/victorxx/imagem/refs/heads/main/oportunidade.png',
+        'https://raw.githubusercontent.com/victorxx/tump/refs/heads/main/ios16.png'
+    ];
+    let escolher=Math.floor(Math.random()*imagens.length);
+    let escolhido=imagens[escolher];
+    procurar.setAttribute('content',escolhido);
+    alert(escolhido);
+}
+</script>
