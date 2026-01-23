@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <meta charset="utf-8">
+    <title>teste de cookies</title>
+    <head>
+<style>
+    body{
+        background-color: black;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .modal{
+        display: none;
+        position:fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: orangered;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column;
+    }
+    body{
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        margin:0;
+    }
+    button{
+        width:550px;
+        height: 250px;
+        border-radius: 12px;
+        padding:0;
+        font-size: 33px;
+        background-color: pink;
+        color:white;
+        border:none;
+        cursor: pointer;
+        margin:20px;
+    }
+    label{
+        color:black;
+        font-size: 55px;
+        margin-bottom:20px;
+    }
+</style>
+</head>
+<body>
+<button onclick="abrir()">CRIAR COOKIE</button>
+
+<div class="modal" id="modal">
+    <label>Deseja confirma?</label>
+    <button onclick="confirma()">CONFIRMA</button>
+    <button onclick="fechar()">CANCELAR</button>
+    <script>
+        function abrir(){
+            document.getElementById('modal').style.display='flex';
+        }
+        function fechar(){
+            document.getElementById('modal').style.display='none';
+        }
+        function confirma(){
+            document.getElementById('modal').style.display='none';
+            let inicia=new Date();
+            inicia.setTime(inicia.getTime()+(7*60*60*1000));
+
+            let expires="expires="+inicia.toUTCString();
+
+            document.cookie="usuario=ok;"+expires+";path=/";
+            let cookies=document.cookie.split(';');
+            for(let i=0;i<cookies.length;i++){
+             let cookie=cookies[i].trim();
+             if(cookie.startsWith("usuario=ok;"))
+                {
+                    alert('cookie criado com sucesso');
+                    break;
+                }
+            }
+        }
+    </script>
+</div>
+</body>
+</html>
