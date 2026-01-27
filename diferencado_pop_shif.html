@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <style>
+            body{
+                height: 100vh;
+                display: flex;
+                background-color: black;
+                align-items: center;
+                justify-content: center;
+                margin:0;
+            }
+            .container {
+                width:90%;
+                max-width: 770px;
+                background-color: orchid;
+                text-align: center;
+                font-size: 33px;
+                color:white;
+                display: flex;
+                gap:30px;
+                padding:20px;
+                justify-content: center;
+            }
+            .container div{
+                width:440px;
+                background-color: lime;
+                display: flex;
+                border-radius: 12px;
+                justify-content: center;
+                align-items: center;
+                min-height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>1</div>
+            <div>2</div>
+        </div>
+    </body>
+    <script>
+        let frutas=['maca','banana','coco'];
+        frutas.unshift();//remove o primeiro;
+        let elementos=document.querySelectorAll('.container div');
+
+        elementos.forEach(el1=>{
+        if(el1.textContent==='1')
+        {
+            el1.textContent=frutas.join('');
+        }
+        });
+
+        frutas.pop();//remove o ultimo
+
+        elementos.forEach(el=>{
+            if(el.textContent==='2')
+        {
+            el.textContent=frutas.join('');
+        }
+        })
+    </script>
+</html>
