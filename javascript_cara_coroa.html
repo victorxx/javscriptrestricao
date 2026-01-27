@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        body{
+            background-color: black;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            width: 550px;
+            background-color: orangered;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+            font-size: 33px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="moeda"></div>
+
+    <script>
+        let moeda = ['cara','coroa'];
+
+        // Seleciona aleatoriamente cada lado
+        let m1 = moeda[Math.floor(Math.random() * moeda.length)];
+        let m2 = moeda[Math.floor(Math.random() * moeda.length)];
+
+        let container = document.getElementById('moeda');
+
+        // Cria elementos <p> para mostrar os resultados
+        let resultado1 = document.createElement('p');
+        resultado1.textContent = m1;
+
+        let resultado2 = document.createElement('p');
+        resultado2.textContent = m2;
+
+        // Adiciona os <p> ao container
+        container.appendChild(resultado1);
+        container.appendChild(resultado2);
+    </script>
+</body>
+</html>
