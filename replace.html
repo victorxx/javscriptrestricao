@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            body{
+                background-color: black;
+                height: 100vh;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+            .container{
+                width:550px;
+                height: auto;
+                color:white;
+                border-radius: 12px;
+                font-size: 33px;
+                text-align: center;
+                background-color: orange;
+                font-size: 44px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container"></div>
+<script>
+let texto="lula diz que traficante";
+let resultado=texto.replace(/ /,"_");
+document.querySelector('.container').innerHTML=resultado;
+</script>
+    </body>
+</html>
