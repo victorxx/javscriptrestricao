@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+       <style>
+       body{
+        background-color: black;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+       }
+       input{
+        width:90%;
+        font-size: 44px;
+        text-align: center;
+        height: 110px;
+        box-shadow: 10px 10px 10px purple;
+       }
+       button{
+        width:250px;
+        font-size: 33px;
+        border-radius: 12px;
+        position: absolute;
+        height: 125px;
+        top:135px;
+       }
+       #resultado{
+        width:90%;
+        color:white;
+        text-align: center;
+        background-color: orangered;
+        border-radius: 12px;
+        height: 250px;
+        position: absolute;
+        line-height: 120px;
+        bottom:40px;
+        font-size: 55px;
+       }
+       </style>
+    </head>
+    <body>
+<input type="text" id="login" placeholder="digite seu email" name="login">
+<input type="password" id="senha" placeholder="digite sua senha" name="senha">
+
+<button onclick="validar()">VALIDAR</button>
+<div id="resultado">
+ok
+</div>
+ </body>
+ <script>
+    let usuario={
+        email:'email@gmail.com',
+        senha:'123'
+    }
+    function validar()
+    {
+        let email_input=document.getElementById('login').value;
+        let senha_input=document.getElementById('senha').value;
+        if(email_input==usuario.email && senha_input==usuario.senha)
+    {
+        document.getElementById('resultado').innerHTML='OK ESTÁ LOGADO COM SUCESSO';
+    }
+        
+    }
+ </script>
+</html>
