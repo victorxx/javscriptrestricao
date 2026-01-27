@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <head>
+            <style>
+            body{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                text-align: center;
+                height: 100vh;
+                align-items: center;
+                justify-content: center;
+                margin:0;
+            }
+            @media(max-width:90rem)
+            {
+                body{
+                    transform: translate(1%);
+                }
+            }
+            #conteudo{
+                width:90%;
+                font-size: 90px;
+                padding:20px;
+                background-color: orangered;
+                text-align: center;
+                border-radius: 12px;
+            }
+    </style>
+    </head>
+    <body>
+        <div id="conteudo">
+            
+        </div>
+        <script>
+            let cores=['vermelho','azul'];
+            cores.push('verde');// adiciona ao final
+            cores.unshift('amarelo');// adiciona no início
+            cores.pop();// remove o último
+            cores.unshift(); // remove o primeiro
+            document.getElementById('conteudo').innerHTML=cores;
+        </script>
+    </body>
+</html>
