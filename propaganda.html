@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+     <style>
+        .propaganda{
+            box-shadow: 10px 10px lime;
+            border-radius: 12px;
+            width:350px;
+            font-size: 33px;
+            border-radius: 12px;
+            justify-content: center;
+            height: 250px;
+        }
+        .propaganda iframe{
+            width:100%;
+            height: 100%;
+            position:relative;
+        }
+        
+        .fechar{
+            border-radius: 12px;
+            width:100px;
+            background-color:lime;
+            height: 100px;
+            line-height: 90px;
+            cursor:pointer;
+            position:fixed;
+            z-index: 10001;
+            top:10px;
+            text-align: center;
+            font-size: 60px;
+        }
+        .clicavel{
+            width:400px;
+            background-color: lime;
+            height: 250px;
+            border-radius: 12px;
+            top:110px;
+            cursor: pointer;
+            z-index: 100001;
+            opacity: 0;
+            position:fixed;
+        }
+     </style>
+    </head>
+    <body>
+        <div class="fechar" onclick="ok()">
+            x
+        </div>
+        <div class="clicavel" onclick="window.location.href='https://www.espiritosanto-es.com.br/produtos/nintendo.html'">
+        </div>
+        <div class="propaganda">
+            <iframe src="https://www.espiritosanto-es.com.br/produtos/nintendo.html"></iframe>
+        </div>
+        <script>
+            function ok(){
+                document.querySelector('.clicavel').style.display='none';
+                document.querySelector('.propaganda').style.display='none';
+                document.querySelector('.fechar').style.display='none';
+            }
+        </script>
+    </body>
+</html>
