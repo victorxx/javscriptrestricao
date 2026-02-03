@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            background-color: black;
+            height: 100vh;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .propaganda {
+            text-align: center;
+            width: 550px;
+            border-radius: 12px;
+            background-color: yellow;
+            height: 250px;
+            font-size: 33px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fechar {
+            width: 250px;
+            height: 110px;
+            font-size: 90px;
+            cursor: pointer;
+            background-color: lime;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div class="propaganda" id="1">PROPAGANDA</div>
+<div class="fechar" id="1">X</div>
+
+<script>
+    // Seleciona todos os elementos com id="1"
+    const elementos = document.querySelectorAll('[id="1"]');
+
+    elementos.forEach(el => {
+        el.addEventListener('click', () => {
+            // Verifica se o texto é "X" (maiúsculo)
+            if(el.textContent.trim().toUpperCase() === 'X') {
+                elementos.forEach(e => e.style.display = 'none'); // esconde todos
+            }
+        });
+    });
+</script>
+</body>
+</html>
