@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            #ok{
+            position:absolute;
+            top:0;
+            width:330px;
+            height:250px;
+            background-color: orangered;
+            border-radius:12px;
+        }
+        </style>
+    </head>
+    <body>
+    <div id="ok">
+
+    </div>
+    <script>
+        let posicao=0;
+        let limite=300;
+        let velocidade=2;
+        let intervalo=setInterval(()=>{
+        
+
+            posicao+=velocidade;
+            document.getElementById('ok').style.top=posicao+'px';
+            if(posicao>=limite)
+        {
+            clearInterval(intervalo);
+        }
+        },50);
+        
+    </script>
+    </body>
+</html>
