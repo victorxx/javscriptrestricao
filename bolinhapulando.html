@@ -1,0 +1,65 @@
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Pulo da Bola</title>
+<style>
+  #bola {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+  }
+  body {
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    overflow: hidden;
+  }
+</style>
+</head>
+<body>
+<div id="bola"></div>
+<script>
+    let posicao=0;
+    let velocidade=0;
+    let gravidade=0.6;
+    let pulando=false;
+    function pular(event){
+        if(event.code==='Space')
+        {
+            velocidade=12;
+            pulando=true;
+        }
+    }
+    function animar(){
+        const bola=document.getElementById('bola');
+        velocidade-=gravidade;
+        posicao+=velocidade;
+        if(posicao<=0){
+            posicao=0;velocidade=0;pulando=false;
+        }
+        bola.style.bottom=posicao+"px";
+        requestAnimationFrame(animar);
+    }
+    document.addEventListener("keydown", pular);
+    animar();
+    
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
