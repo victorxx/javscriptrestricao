@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+        body{
+            position:relative;
+            height: 200px;
+        }
+        #bola-css{
+            position:absolute;
+            top:20px;
+            animation:movendoc 2s linear infinite;
+            left: 0;
+            background-color: red;
+            width:100px;
+            height: 100px;
+        }
+        @keyframes movendoc{
+            0%{left: 0;}
+            50%{left: 300px;}
+            100%{left: 0;}
+        }
+        #bola-js{
+            position:absolute;
+            top:100px;
+            left: 0;
+            background-color: blue;
+            width:100px;
+            height: 100px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="bola-css"></div>
+        <div id="bola-js"></div>
+        <script>
+           let x=0;
+           let limite=330;
+           let velocidade=2;
+           let subindo=true;
+           let bolajs=document.getElementById('bola-js') ;
+           function animar()
+           {
+            if(subindo)
+            {
+                x+=velocidade;
+                if(x>=limite) subindo=false;
+
+            }else{
+                x-=velocidade;
+                if(x<=0)subindo=true;
+            }
+            bolajs.style.left=x+'px';
+            requestAnimationFrame(animar);
+           }
+           animar();
+        </script>
+    </body>
+</html>
