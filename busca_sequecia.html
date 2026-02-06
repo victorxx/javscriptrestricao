@@ -1,0 +1,20 @@
+<div id="resposta"></div>
+<script>
+
+    let numeros = [10, 20, 30, 40, 50];
+let procurar = 30;
+let encontrado = false;
+
+for (let i = 0; i < numeros.length; i++) {
+  if (numeros[i] === procurar) {
+    document.getElementById("resposta").innerHTML='ok';
+    encontrado = true;
+    break; // sai do loop quando encontrar
+  }
+}
+
+if (!encontrado) {
+  console.log("Número não encontrado");
+}
+
+</script>
